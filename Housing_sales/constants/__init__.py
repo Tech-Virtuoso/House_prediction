@@ -1,5 +1,5 @@
 import os
-from datetime import date
+#from datetime import date
 
 DATABASE_NAME = "House_Loan"
 
@@ -18,7 +18,7 @@ PREPROCSSING_OBJECT_FILE_NAME = "preprocessing.pkl"
 FILE_NAME: str = "bank.csv"
 TRAIN_FILE_NAME: str = "train.csv"
 TEST_FILE_NAME: str = "test.csv"
-SCHEMA_FILE_PATH = os.path.join("config", "schema.yaml")
+#SCHEMA_FILE_PATH = os.path.join("config", "schema.yaml")
 
 
 # AWS_ACCESS_KEY_ID_ENV_KEY = "AWS_ACCESS_KEY_ID"
