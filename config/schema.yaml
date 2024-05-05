@@ -1,0 +1,62 @@
+columns:
+  - age: int
+  - job: category
+  - marital: category
+  - education: category
+  - default: category
+  - balance: int
+  - housing: category
+  - loan: category
+  - contact: category
+  - day: int
+  - month: category
+  - duration: int
+  - campaign: int
+  - pdays: int
+  - previous: int
+  - poutcome: category
+  - y: category
+
+numerical_columns:
+  - age
+  - balance
+  - day
+  - duration
+  - campaign
+  - pdays
+  - previous
+
+categorical_columns:
+  - job
+  - marital
+  - education
+  - default
+  - housing
+  - loan
+  - contact
+  - month
+  - poutcome
+  - y
+
+drop_columns:
+  - marital
+  - education
+  - default
+  - balance
+  - day
+  - campaign
+
+# # for data transformation
+# num_features:
+#   - age
+#   - balance
+
+# or_columns: []
+
+# oh_columns:
+#   - job
+#   - housing
+#   - contact
+#   - month
+#   - poutcome
+#   - y
