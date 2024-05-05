@@ -46,17 +46,17 @@ drop_columns:
   - day
   - campaign
 
-# # for data transformation
-# num_features:
-#   - age
-#   - balance
+# for data transformation
+num_features:
+  - age
+  - balance
 
-# or_columns: []
+or_columns: []
 
-# oh_columns:
-#   - job
-#   - housing
-#   - contact
-#   - month
-#   - poutcome
-#   - y
+oh_columns:
+  - job
+  - housing
+  - contact
+  - month
+  - poutcome
+  - y
