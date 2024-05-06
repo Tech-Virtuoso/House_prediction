@@ -51,12 +51,11 @@ num_features:
   - age
   - balance
 
-or_columns: []
-
+or_columns: 
+  - contact
+  - month
 oh_columns:
   - job
   - housing
-  - contact
-  - month
   - poutcome
   - y
