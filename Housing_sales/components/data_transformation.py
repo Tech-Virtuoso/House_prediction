@@ -7,7 +7,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler, OneHotEncoder, OrdinalEncoder, PowerTransformer
 from sklearn.compose import ColumnTransformer
 
-from Housing_sales.constants import TARGET_COLUMN, SCHEMA_FILE_PATH, CURRENT_YEAR
+from Housing_sales.constants import TARGET_COLUMN, SCHEMA_FILE_PATH
 from Housing_sales.entity.config_entity import DataTransformationConfig
 from Housing_sales.entity.artifact_entity import DataTransformationArtifact, DataIngestionArtifact, DataValidationArtifact
 from Housing_sales.exception import bankexception
@@ -111,7 +111,7 @@ class DataTransformation:
 
                 logging.info("Got train features and test features of Training dataset")
 
-                input_feature_train_df['company_age'] = CURRENT_YEAR-input_feature_train_df['yr_of_estab']
+                #input_feature_train_df['company_age'] = CURRENT_YEAR-input_feature_train_df['yr_of_estab']
 
                 logging.info("Added company_age column to the Training dataset")
 
@@ -131,7 +131,7 @@ class DataTransformation:
                 target_feature_test_df = test_df[TARGET_COLUMN]
 
 
-                input_feature_test_df['company_age'] = CURRENT_YEAR-input_feature_test_df['yr_of_estab']
+                #input_feature_test_df['company_age'] = CURRENT_YEAR-input_feature_test_df['yr_of_estab']
 
                 logging.info("Added company_age column to the Test dataset")
 
