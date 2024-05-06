@@ -113,7 +113,7 @@ class DataTransformation:
 
                 #input_feature_train_df['company_age'] = CURRENT_YEAR-input_feature_train_df['yr_of_estab']
 
-                logging.info("Added company_age column to the Training dataset")
+                #logging.info("Added company_age column to the Training dataset")
 
                 drop_cols = self._schema_config['drop_columns']
 
