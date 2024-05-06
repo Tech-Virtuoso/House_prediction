@@ -133,14 +133,15 @@ class DataTransformation:
 
                 #input_feature_test_df['company_age'] = CURRENT_YEAR-input_feature_test_df['yr_of_estab']
 
-                logging.info("Added company_age column to the Test dataset")
+                #logging.info("Added company_age column to the Test dataset")
 
                 input_feature_test_df = drop_columns(df=input_feature_test_df, cols = drop_cols)
 
                 logging.info("drop the columns in drop_cols of Test dataset")
 
                 target_feature_test_df = target_feature_test_df.replace(
-                TargetValueMapping()._asdict()
+                       
+                    TargetValueMapping()._asdict()
                 )
 
                 logging.info("Got train features and test features of Testing dataset")
