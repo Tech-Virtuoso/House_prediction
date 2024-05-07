@@ -42,7 +42,7 @@ drop_columns:
   - marital
   - education
   - default
-  - balance
+  #- balance
   - day
   - campaign
 
