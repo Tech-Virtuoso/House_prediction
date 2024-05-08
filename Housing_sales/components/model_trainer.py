@@ -43,11 +43,14 @@ class ModelTrainer:
                 X=x_train,y=y_train,base_accuracy=self.model_trainer_config.expected_accuracy
             )
             model_obj = best_model_detail.best_model
-
+            logging.info(f"model object ={model_obj}")
             y_pred = model_obj.predict(x_test)
-            
+            logging.info(f"Y_pred ={y_pred}")
+
             accuracy = accuracy_score(y_test, y_pred) 
+            logging.info(f"accuracy ={accuracy}")
             f1 = f1_score(y_test, y_pred)  
+            logging.info(f"f1 ={f1}")
             precision = precision_score(y_test, y_pred)  
             recall = recall_score(y_test, y_pred)
             metric_artifact = ClassificationMetricArtifact(f1_score=f1, precision_score=precision, recall_score=recall)
