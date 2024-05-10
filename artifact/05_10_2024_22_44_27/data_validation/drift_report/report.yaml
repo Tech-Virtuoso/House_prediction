@@ -1,0 +1,707 @@
+data_drift:
+  data:
+    cat_feature_names:
+    - contact
+    - default
+    - education
+    - housing
+    - job
+    - loan
+    - marital
+    - month
+    - poutcome
+    - y
+    datetime_feature_names: []
+    metrics:
+      age:
+        current_small_hist:
+          x:
+          - 21.0
+          - 27.2
+          - 33.4
+          - 39.6
+          - 45.8
+          - 52.0
+          - 58.2
+          - 64.4
+          - 70.6
+          - 76.80000000000001
+          - 83.0
+          y:
+          - 0.01015861700231688
+          - 0.03457494207806095
+          - 0.03510960613081446
+          - 0.029762965603279293
+          - 0.021921226162894304
+          - 0.021030119408305105
+          - 0.006059525931206556
+          - 0.0008911067545892015
+          - 0.0007128854036713579
+          - 0.0010693281055070417
+        drift_detected: false
+        drift_score: 0.02839032067008597
+        feature_type: num
+        ref_small_hist:
+          x:
+          - 19.0
+          - 25.8
+          - 32.6
+          - 39.4
+          - 46.2
+          - 53.0
+          - 59.8
+          - 66.6
+          - 73.4
+          - 80.19999999999999
+          - 87.0
+          y:
+          - 0.003578865174388339
+          - 0.030623698594482038
+          - 0.04070959135866738
+          - 0.027492191566892227
+          - 0.020334461218115572
+          - 0.018545028630921404
+          - 0.0032535137948984916
+          - 0.0013420744403956249
+          - 0.0008947162935970871
+          - 0.00028468245705361747
+        stattest_name: Wasserstein distance (normed)
+      balance:
+        current_small_hist:
+          x:
+          - -1313.0
+          - 1457.6999999999998
+          - 4228.4
+          - 6999.0999999999985
+          - 9769.8
+          - 12540.5
+          - 15311.199999999997
+          - 18081.899999999998
+          - 20852.6
+          - 23623.3
+          - 26394.0
+          y:
+          - 0.0002660037443915384
+          - 6.34101879434102e-05
+          - 1.7946279606625533e-05
+          - 7.178511842650208e-06
+          - 1.5952248539222688e-06
+          - 1.595224853922271e-06
+          - 1.1964186404417016e-06
+          - 0.0
+          - 1.1964186404417016e-06
+          - 7.976124269611344e-07
+        drift_detected: false
+        drift_score: 0.036932568524558076
+        feature_type: num
+        ref_small_hist:
+          x:
+          - -3313.0
+          - 4137.1
+          - 11587.2
+          - 19037.300000000003
+          - 26487.4
+          - 33937.5
+          - 41387.600000000006
+          - 48837.700000000004
+          - 56287.8
+          - 63737.90000000001
+          - 71188.0
+          y:
+          - 0.00012205098393286399
+          - 1.0059554940938608e-05
+          - 1.4476850284007586e-06
+          - 4.4544154720023366e-07
+          - 1.484805157334112e-07
+          - 0.0
+          - 3.71201289333528e-08
+          - 0.0
+          - 0.0
+          - 3.712012893335284e-08
+        stattest_name: Wasserstein distance (normed)
+      campaign:
+        current_small_hist:
+          x:
+          - 1.0
+          - 3.9
+          - 6.8
+          - 9.7
+          - 12.6
+          - 15.5
+          - 18.4
+          - 21.3
+          - 24.2
+          - 27.099999999999998
+          - 30.0
+          y:
+          - 0.27090874452276625
+          - 0.046485044770432464
+          - 0.013335873499714233
+          - 0.006096399314155077
+          - 0.004191274528481615
+          - 0.00152409982853877
+          - 0.000381024957134692
+          - 0.000762049914269385
+          - 0.0
+          - 0.001143074871404076
+        drift_detected: false
+        drift_score: 0.0383679521468083
+        feature_type: num
+        ref_small_hist:
+          x:
+          - 1.0
+          - 5.9
+          - 10.8
+          - 15.700000000000001
+          - 20.6
+          - 25.5
+          - 30.400000000000002
+          - 35.300000000000004
+          - 40.2
+          - 45.1
+          - 50.0
+          y:
+          - 0.18286075492143758
+          - 0.015577027271085425
+          - 0.0033298717717175365
+          - 0.0012980856059237854
+          - 0.0006208235506592019
+          - 0.0001128770092107639
+          - 0.00016931551381614584
+          - 0.0
+          - 5.643850460538199e-05
+          - 5.643850460538199e-05
+        stattest_name: Wasserstein distance (normed)
+      contact:
+        current_small_hist:
+          x:
+          - cellular
+          - telephone
+          - unknown
+          y:
+          - 565
+          - 63
+          - 277
+        drift_detected: false
+        drift_score: 0.01492293100369527
+        feature_type: cat
+        ref_small_hist:
+          x:
+          - cellular
+          - telephone
+          - unknown
+          y:
+          - 2331
+          - 238
+          - 1047
+        stattest_name: Jensen-Shannon distance
+      dataset_drift: false
+      day:
+        current_small_hist:
+          x:
+          - 1.0
+          - 4.0
+          - 7.0
+          - 10.0
+          - 13.0
+          - 16.0
+          - 19.0
+          - 22.0
+          - 25.0
+          - 28.0
+          - 31.0
+          y:
+          - 0.020994475138121547
+          - 0.028729281767955802
+          - 0.0423572744014733
+          - 0.02725598526703499
+          - 0.039042357274401474
+          - 0.04456721915285451
+          - 0.04456721915285451
+          - 0.015469613259668509
+          - 0.025046040515653775
+          - 0.045303867403314914
+        drift_detected: false
+        drift_score: 0.03357637823485951
+        feature_type: num
+        ref_small_hist:
+          x:
+          - 1.0
+          - 4.0
+          - 7.0
+          - 10.0
+          - 13.0
+          - 16.0
+          - 19.0
+          - 22.0
+          - 25.0
+          - 28.0
+          - 31.0
+          y:
+          - 0.017422566371681415
+          - 0.03954646017699115
+          - 0.03853244837758112
+          - 0.025719026548672565
+          - 0.03954646017699115
+          - 0.042404129793510326
+          - 0.04931784660766962
+          - 0.016777286135693216
+          - 0.02166297935103245
+          - 0.042404129793510326
+        stattest_name: Wasserstein distance (normed)
+      default:
+        current_small_hist:
+          x:
+          - 'no'
+          - 'yes'
+          y:
+          - 891
+          - 14
+        drift_detected: false
+        drift_score: 0.0046805882226387185
+        feature_type: cat
+        ref_small_hist:
+          x:
+          - 'no'
+          - 'yes'
+          y:
+          - 3554
+          - 62
+        stattest_name: Jensen-Shannon distance
+      duration:
+        current_small_hist:
+          x:
+          - 4.0
+          - 249.2
+          - 494.4
+          - 739.5999999999999
+          - 984.8
+          - 1230.0
+          - 1475.1999999999998
+          - 1720.3999999999999
+          - 1965.6
+          - 2210.7999999999997
+          - 2456.0
+          y:
+          - 0.0025190846574675765
+          - 0.001018449253287428
+          - 0.00033347453426225526
+          - 0.00011716672825430585
+          - 2.703847575099366e-05
+          - 3.15448883761593e-05
+          - 1.802565050066244e-05
+          - 4.50641262516561e-06
+          - 4.506412625165614e-06
+          - 4.506412625165605e-06
+        drift_detected: false
+        drift_score: 0.04722874813507115
+        feature_type: num
+        ref_small_hist:
+          x:
+          - 5.0
+          - 307.0
+          - 609.0
+          - 911.0
+          - 1213.0
+          - 1515.0
+          - 1817.0
+          - 2119.0
+          - 2421.0
+          - 2723.0
+          - 3025.0
+          y:
+          - 0.002423921643321807
+          - 0.0005888105843052218
+          - 0.00018863916075719393
+          - 7.417365058899373e-05
+          - 1.9230205708257632e-05
+          - 1.098868897614722e-05
+          - 3.6628963253824064e-06
+          - 0.0
+          - 0.0
+          - 1.8314481626912032e-06
+        stattest_name: Wasserstein distance (normed)
+      education:
+        current_small_hist:
+          x:
+          - primary
+          - secondary
+          - tertiary
+          - unknown
+          y:
+          - 130
+          - 484
+          - 258
+          - 33
+        drift_detected: false
+        drift_score: 0.02288573998340613
+        feature_type: cat
+        ref_small_hist:
+          x:
+          - primary
+          - secondary
+          - tertiary
+          - unknown
+          y:
+          - 548
+          - 1822
+          - 1092
+          - 154
+        stattest_name: Jensen-Shannon distance
+      housing:
+        current_small_hist:
+          x:
+          - 'no'
+          - 'yes'
+          y:
+          - 376
+          - 529
+        drift_detected: false
+        drift_score: 0.016537869456883836
+        feature_type: cat
+        ref_small_hist:
+          x:
+          - 'no'
+          - 'yes'
+          y:
+          - 1586
+          - 2030
+        stattest_name: Jensen-Shannon distance
+      job:
+        current_small_hist:
+          x:
+          - admin.
+          - blue-collar
+          - entrepreneur
+          - housemaid
+          - management
+          - retired
+          - self-employed
+          - services
+          - student
+          - technician
+          - unemployed
+          - unknown
+          y:
+          - 81
+          - 189
+          - 27
+          - 26
+          - 211
+          - 47
+          - 39
+          - 86
+          - 14
+          - 156
+          - 22
+          - 7
+        drift_detected: false
+        drift_score: 0.03935413652200029
+        feature_type: cat
+        ref_small_hist:
+          x:
+          - admin.
+          - blue-collar
+          - entrepreneur
+          - housemaid
+          - management
+          - retired
+          - self-employed
+          - services
+          - student
+          - technician
+          - unemployed
+          - unknown
+          y:
+          - 397
+          - 757
+          - 141
+          - 86
+          - 758
+          - 183
+          - 144
+          - 331
+          - 70
+          - 612
+          - 106
+          - 31
+        stattest_name: Jensen-Shannon distance
+      loan:
+        current_small_hist:
+          x:
+          - 'no'
+          - 'yes'
+          y:
+          - 776
+          - 129
+        drift_detected: false
+        drift_score: 0.012789610220064146
+        feature_type: cat
+        ref_small_hist:
+          x:
+          - 'no'
+          - 'yes'
+          y:
+          - 3054
+          - 562
+        stattest_name: Jensen-Shannon distance
+      marital:
+        current_small_hist:
+          x:
+          - divorced
+          - married
+          - single
+          y:
+          - 112
+          - 577
+          - 216
+        drift_detected: false
+        drift_score: 0.026542426909579704
+        feature_type: cat
+        ref_small_hist:
+          x:
+          - divorced
+          - married
+          - single
+          y:
+          - 416
+          - 2220
+          - 980
+        stattest_name: Jensen-Shannon distance
+      month:
+        current_small_hist:
+          x:
+          - apr
+          - aug
+          - dec
+          - feb
+          - jan
+          - jul
+          - jun
+          - mar
+          - may
+          - nov
+          - oct
+          - sep
+          y:
+          - 56
+          - 117
+          - 2
+          - 48
+          - 28
+          - 145
+          - 120
+          - 12
+          - 279
+          - 73
+          - 15
+          - 10
+        drift_detected: false
+        drift_score: 0.03336278568646578
+        feature_type: cat
+        ref_small_hist:
+          x:
+          - apr
+          - aug
+          - dec
+          - feb
+          - jan
+          - jul
+          - jun
+          - mar
+          - may
+          - nov
+          - oct
+          - sep
+          y:
+          - 237
+          - 516
+          - 18
+          - 174
+          - 120
+          - 561
+          - 411
+          - 37
+          - 1119
+          - 316
+          - 65
+          - 42
+        stattest_name: Jensen-Shannon distance
+      n_drifted_features: 0
+      n_features: 17
+      pdays:
+        current_small_hist:
+          x:
+          - -1.0
+          - 79.5
+          - 160.0
+          - 240.5
+          - 321.0
+          - 401.5
+          - 482.0
+          - 562.5
+          - 643.0
+          - 723.5
+          - 804.0
+          y:
+          - 0.010281047321643047
+          - 0.0005353282317010398
+          - 0.0006863182457705637
+          - 0.0003019800281390481
+          - 0.0004941491369548059
+          - 8.235818949246766e-05
+          - 1.3726364915411275e-05
+          - 0.0
+          - 1.3726364915411275e-05
+          - 1.3726364915411275e-05
+        drift_detected: false
+        drift_score: 0.015303177593115896
+        feature_type: num
+        ref_small_hist:
+          x:
+          - -1.0
+          - 86.2
+          - 173.4
+          - 260.6
+          - 347.8
+          - 435.0
+          - 522.2
+          - 609.4
+          - 696.6
+          - 783.8000000000001
+          - 871.0
+          y:
+          - 0.00953648920191605
+          - 0.0006374573759844118
+          - 0.0004884001786149224
+          - 0.00045668588130226524
+          - 0.0003044572542015101
+          - 2.5371437850125827e-05
+          - 3.171429731265733e-06
+          - 6.342859462531457e-06
+          - 3.1714297312657284e-06
+          - 6.342859462531466e-06
+        stattest_name: Wasserstein distance (normed)
+      poutcome:
+        current_small_hist:
+          x:
+          - failure
+          - other
+          - success
+          - unknown
+          y:
+          - 93
+          - 41
+          - 29
+          - 742
+        drift_detected: false
+        drift_score: 0.012332895010204159
+        feature_type: cat
+        ref_small_hist:
+          x:
+          - failure
+          - other
+          - success
+          - unknown
+          y:
+          - 397
+          - 156
+          - 100
+          - 2963
+        stattest_name: Jensen-Shannon distance
+      previous:
+        current_small_hist:
+          x:
+          - 0.0
+          - 1.8
+          - 3.6
+          - 5.4
+          - 7.2
+          - 9.0
+          - 10.8
+          - 12.6
+          - 14.4
+          - 16.2
+          - 18.0
+          y:
+          - 0.4935543278084714
+          - 0.03990178023327194
+          - 0.01534683855125844
+          - 0.004297114794352364
+          - 0.0006138735420503377
+          - 0.0006138735420503374
+          - 0.000613873542050338
+          - 0.0
+          - 0.0
+          - 0.0006138735420503374
+        drift_detected: false
+        drift_score: 0.05926561328586676
+        feature_type: num
+        ref_small_hist:
+          x:
+          - 0.0
+          - 2.5
+          - 5.0
+          - 7.5
+          - 10.0
+          - 12.5
+          - 15.0
+          - 17.5
+          - 20.0
+          - 22.5
+          - 25.0
+          y:
+          - 0.3694690265486726
+          - 0.016482300884955753
+          - 0.008738938053097346
+          - 0.0028761061946902654
+          - 0.0012168141592920356
+          - 0.000331858407079646
+          - 0.00022123893805309737
+          - 0.00011061946902654868
+          - 0.00022123893805309737
+          - 0.000331858407079646
+        stattest_name: Wasserstein distance (normed)
+      share_drifted_features: 0.0
+      y:
+        current_small_hist:
+          x:
+          - 'no'
+          - 'yes'
+          y:
+          - 787
+          - 118
+        drift_detected: false
+        drift_score: 0.02054548788452878
+        feature_type: cat
+        ref_small_hist:
+          x:
+          - 'no'
+          - 'yes'
+          y:
+          - 3213
+          - 403
+        stattest_name: Jensen-Shannon distance
+    num_feature_names:
+    - age
+    - balance
+    - campaign
+    - day
+    - duration
+    - pdays
+    - previous
+    options:
+      confidence: null
+      drift_share: 0.5
+      nbinsx: 10
+      xbins: null
+    target_names: null
+    text_feature_names: []
+    utility_columns:
+      date: null
+      id: null
+      prediction: null
+      target: null
+  datetime: '2024-05-10 22:44:33.110878'
+  name: data_drift
+timestamp: '2024-05-10 22:44:33.110878'
