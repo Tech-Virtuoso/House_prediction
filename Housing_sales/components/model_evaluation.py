@@ -2,12 +2,12 @@ from Housing_sales.entity.config_entity import ModelEvaluationConfig
 from Housing_sales.entity.artifact_entity import ModelTrainerArtifact, DataIngestionArtifact, ModelEvaluationArtifact
 from sklearn.metrics import f1_score
 from Housing_sales.exception import bankexception
-from Housing_sales.constants import TARGET_COLUMN, CURRENT_YEAR
+from Housing_sales.constants import TARGET_COLUMN
 from Housing_sales.logger import logging
 import sys
 import pandas as pd
 from typing import Optional
-from Housing_sales.entity.s3_estimator import USvisaEstimator
+from Housing_sales.entity.s3_estimator import bankEstimator
 from dataclasses import dataclass
 from Housing_sales.entity.estimator import USvisaModel
 from Housing_sales.entity.estimator import TargetValueMapping
@@ -31,7 +31,7 @@ class ModelEvaluation:
         except Exception as e:
             raise bankexception(e, sys) from e
 
-    def get_best_model(self) -> Optional[USvisaEstimator]:
+    def get_best_model(self) -> Optional[bankEstimator]:
         """
         Method Name :   get_best_model
         Description :   This function is used to get model in production
@@ -42,7 +42,7 @@ class ModelEvaluation:
         try:
             bucket_name = self.model_eval_config.bucket_name
             model_path=self.model_eval_config.s3_model_key_path
-            usvisa_estimator = USvisaEstimator(bucket_name=bucket_name,
+            usvisa_estimator = bankEstimator(bucket_name=bucket_name,
                                                model_path=model_path)
 
             if usvisa_estimator.is_model_present(model_path=model_path):
@@ -62,7 +62,7 @@ class ModelEvaluation:
         """
         try:
             test_df = pd.read_csv(self.data_ingestion_artifact.test_file_path)
-            test_df['company_age'] = CURRENT_YEAR-test_df['yr_of_estab']
+            #test_df['company_age'] = CURRENT_YEAR-test_df['yr_of_estab']
 
             x, y = test_df.drop(TARGET_COLUMN, axis=1), test_df[TARGET_COLUMN]
             y = y.replace(
