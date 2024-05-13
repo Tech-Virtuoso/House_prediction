@@ -101,7 +101,7 @@ async def predictRouteClient(request: Request):
 
         model_predictor = bankClassifier()
 
-        value = model_predictor.predict(dataframe=usvisa_df)[0]
+        value = model_predictor.predict(dataframe=loan_df)[0]
 
         status = None
         if value == 1:
