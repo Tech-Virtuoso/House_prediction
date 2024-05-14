@@ -61,7 +61,7 @@ class DataForm:
 async def index(request: Request):
 
     return templates.TemplateResponse(
-            "bank.html",{"request": request, "context": "Rendering"})
+            "U1.html",{"request": request, "context": "Rendering"})
 
 
 @app.get("/train")
@@ -110,7 +110,7 @@ async def predictRouteClient(request: Request):
             status = "Loan Not-Approved"
 
         return templates.TemplateResponse(
-            "bank.html",
+            "U1.html",
             {"request": request, "context": status},
         )
         
